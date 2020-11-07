@@ -1,0 +1,299 @@
+* {
+    margin: 1%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f3f8;
+    color: #f7f7f7;
+}
+
+.notes {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("teach-3.jpg");
+    background: #f1f3f8;
+    background-size: cover;
+    min-height: 80vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    place-items: center;
+}
+
+.container.active {
+    transition: all .2s;
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+.container .note {
+    background: #fca849;
+    background: #fa714b;
+    background: #c6d947;
+    /* background: #8b6af7; */
+    color: #31291d;
+    padding: 1em 1.5em 1em 1.5em;
+    margin: 5%;
+    border-radius: 40px;
+}
+
+.text,
+.date,
+.notetitle {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+}
+
+.notetitle {
+    margin: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+.text p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.date p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.date {
+    justify-content: flex-start;
+}
+
+.icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.edit_icon .circle {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    background: #31291d;
+}
+
+.edit_icon i {
+    position: absolute;
+    top: 21%;
+    left: 25%;
+    color: #f1f3f8;
+}
+
+.edit_icon .fa-times {
+    top: 18%;
+    left: 28%;
+}
+
+.title h2 {
+    color: #31291d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    user-select: none;
+}
+
+/* ADD BUTTON */
+.add {
+    position: fixed;
+    top: 5%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.share {
+    top: 90%;
+    cursor: pointer;
+}
+
+.share .share_sign {
+    height: 40px;
+    width: 40px;
+    background: #31291d;
+    border-radius: 40px;
+}
+
+.share_sign i {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.add .add_sign {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background: #31291d;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.add_sign i {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    font-size: 1.8rem;
+    transition: .3s;
+}
+
+.add_sign i.active {
+    transition: all .3s;
+    transform: rotate(45deg);
+}
+
+/* FoRM */
+
+.form_cont {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.delete_cont {
+    top: 30%;
+}
+
+
+.form_cont.active,
+.delete_cont.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.form {
+    /* margin: 7%; */
+    /* background: #ffffff; */
+    padding: 1em 3em 1em 3em;
+    border-radius: 3px;
+}
+
+
+.form h2 {
+    margin-bottom: 10%;
+    padding: 1px 7px;
+    color: #31291d;
+    font-family: 'Poppins', sans-serif;
+}
+
+#notetitle {
+    outline: none;
+    border: .1px solid #313131;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+}
+
+textarea,
+input[type="text"] {
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+    padding: .5em .5em;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: 10%;
+    border: .5px dashed #000000;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.button button {
+    margin-top: 3%;
+    padding: .6em 1em .6em 1em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background: #2b75ff;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.button #deleteBtn {
+    font-size: .7rem;
+    background: rgb(253, 65, 65);
+}
+
+.button #deleteBtn:hover {
+    transition: all .3s;
+    background: rgb(151, 33, 33);
+}
+
+.button button:hover {
+    transition: all .3s;
+    background: #3562b6;
+}
+
+
+@media(max-width:1149px) {
+    .container .note {
+        padding: 1em .5em 1em .5em;
+    }
+}
+
+@media(max-width:1050px) {
+    .container {
+        grid-gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:760px) {
+    .title h2 {
+        text-align: center;
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+    }
+
+    .notetitle {
+        margin: 1%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+    }
+
+    .form_cont {
+        top: 50%;
+    }
+
+    textarea {
+        width: 105%;
+    }
+
+    .container {
+        grid-gap: 3px;
+        grid-template-columns: 100%;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--iCON -->
+    <link rel="icon"
+        href="https://www.wikihow.com/images/thumb/1/18/Take-Better-Notes-Step-1-Version-2.jpg/v4-460px-Take-Better-Notes-Step-1-Version-2.jpg.webp"
+        type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Notes</title>
+</head>
+
+<body>
+    <section class="notes">
+        <div class="title">
+            <h2>Notes📃</h2>
+        </div>
+
+        <!-- Add Button -->
+        <div class="add">
+            <div class="add_sign">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+        </div>
+        <!-- Notes Container -->
+        <div class="container">
+            <div class="note-1 note">
+                <div class="icon star">
+                    <div class="edit_icon">
+                        <div class="circle"></div>
+                        <i class="fa fa-star" onclick="colorChange(this)" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="notetitle">
+                    <h2>Note 1</h2>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere deleniti exercitationem
+                        autem ex laborum veritatis dolorem voluptate, illum temporibus possimus amet ullam fugit
+                        provident quasi officiis, delectus nihil rem!</p>
+                </div>
+                <div class="date">
+                    <p>November 2, 2020</p>
+                </div>
+                <div class="icon">
+                    <div class="edit_icon">
+                        <div class="circle"></div>
+                        <i class="fa fa-times" onclick="deleteNote(this)" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="note-2 note">
+                <div class="icon">
+                    <div class="edit_icon">
+                        <div class="circle"></div>
+                        <i class="fa fa-star" onclick="colorChange(this)" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="notetitle">
+                    <h2>Note 2</h2>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere deleniti exercitationem
+                        autem ex laborum veritatis dolorem voluptate, illum temporibus possimus amet ullam fugit
+                        provident quasi officiis, delectus nihil rem!</p>
+                </div>
+                <div class="date">
+                    <p>November 2, 2020</p>
+                </div>
+
+                <div class="icon">
+                    <div class="edit_icon">
+                        <div class="circle"></div>
+                        <i class="fa fa-times" onclick="deleteNote(this)" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="note-3 note">
+                <div class="icon">
+                    <div class="edit_icon">
+                        <div class="circle"></div>
+                        <i class="fa fa-star" onclick="colorChange(this)" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="notetitle">
+                    <h2>Note 3</h2>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facere deleniti exercitationem
+                        autem ex laborum veritatis dolorem voluptate, illum temporibus possimus amet ullam fugit
+                        provident quasi officiis, delectus nihil rem!</p>
+                </div>
+                <div class="date">
+                    <p>November 2, 2020</p>
+                </div>
+
+                <div class="icon">
+                    <div class="edit_icon">
+                        <div class="circle"></div>
+                        <i class="fa fa-times" onclick="deleteNote(this)" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Form -->
+
+        <div class="form_cont">
+            <div class="form">
+                <h2>Add Note <i class="fa fa-plus" aria-hidden="true"></i></h2>
+                <div class="note">
+                    <input type="text" id="notetitle" name="title" placeholder="Note Title" autocomplete="off">
+                </div>
+                <div class="note">
+                    <textarea name="note" placeholder="📝" id="note" cols="25" rows="5"></textarea>
+                </div>
+                <div class="button">
+                    <button id="submitBtn">Create 📝</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Delete Note -->
+        <div class="form_cont delete_cont">
+            <div class="form">
+                <h2>Delete 📝</h2>
+                <div class="note">
+                    <input type="text" id="delete_note_title" name="title" placeholder="Enter Title" autocomplete="off">
+                </div>
+                <div class="button">
+                    <button id="deleteBtn">Delete ❌</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <div class="add share">
+            <div class="share_sign">
+                <i class="fa fa-share" aria-hidden="true"></i>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script src="main.js"></script>
+
+</html>
