@@ -2,5 +2,5 @@
 
 ### Key Features : 
     [x] Add a Note
-    [x] Delete the Note
+    [x] Delete your Note
     [x] Share it with anyone !
